@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <!-- Makoto Shinkai Twilight Sky Gradient (Tasogare-doki) -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f29" />
+      <stop offset="22%" stop-color="#1a1c4b" />
+      <stop offset="45%" stop-color="#3d2c5e" />
+      <stop offset="68%" stop-color="#7c4d79" />
+      <stop offset="85%" stop-color="#c96d83" />
+      <stop offset="95%" stop-color="#f29f80" />
+      <stop offset="100%" stop-color="#fbd1a2" />
+    </linearGradient>
+
+    <!-- Horizon Warm Glow -->
+    <radialGradient id="horizonGlow" cx="65%" cy="92%" r="55%">
+      <stop offset="0%" stop-color="#ffe5b4" stop-opacity="0.75" />
+      <stop offset="40%" stop-color="#f48fb1" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#1a1c4b" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Comet Tail Gradient (Cyan / Pink / White Shinkai Style) -->
+    <linearGradient id="cometMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="35%" stop-color="#7dd3fc" stop-opacity="0.35" />
+      <stop offset="75%" stop-color="#e0f2fe" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="1" />
+    </linearGradient>
+
+    <linearGradient id="cometSplit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0" />
+      <stop offset="50%" stop-color="#f472b6" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#fce7f3" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Pastel Cloud Gradients -->
+    <linearGradient id="cloudGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f9a8d4" stop-opacity="0.55" />
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#312e81" stop-opacity="0.7" />
+    </linearGradient>
+
+    <linearGradient id="cloudGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" stop-opacity="0.6" />
+      <stop offset="60%" stop-color="#f472b6" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#4c1d95" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Card Glass Gradient -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.72" />
+      <stop offset="100%" stop-color="#311042" stop-opacity="0.58" />
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#f472b6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#fde68a" stop-opacity="0.7" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <clipPath id="roundedClip">
+      <rect x="0" y="0" width="1200" height="380" rx="20" ry="20" />
+    </clipPath>
+  </defs>
+
+  <style>
+    .title {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: #ffffff;
+      letter-spacing: 3px;
+    }
+    .jp-sub {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #bae6fd;
+      letter-spacing: 4px;
+    }
+    .subtitle {
+      font-family: 'Courier New', Consolas, monospace;
+      font-weight: 600;
+      font-size: 16px;
+      fill: #fce7f3;
+      letter-spacing: 1.5px;
+    }
+    .tag {
+      font-family: 'Courier New', Consolas, monospace;
+      font-size: 12px;
+      fill: #fde68a;
+      letter-spacing: 2px;
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateX(0px) translateY(0px); }
+      50% { transform: translateX(-18px) translateY(-3px); }
+    }
+    @keyframes floatReverse {
+      0%, 100% { transform: translateX(0px); }
+      50% { transform: translateX(16px); }
+    }
+    @keyframes pulseStar {
+      0%, 100% { opacity: 0.25; }
+      50% { opacity: 1; }
+    }
+    @keyframes cometPulse {
+      0%, 100% { opacity: 0.85; }
+      50% { opacity: 1; }
+    }
+    .cloud-slow { animation: floatSlow 14s ease-in-out infinite; }
+    .cloud-rev { animation: floatReverse 18s ease-in-out infinite; }
+    .star-1 { animation: pulseStar 3.2s ease-in-out infinite; }
+    .star-2 { animation: pulseStar 4.5s ease-in-out infinite 1.2s; }
+    .star-3 { animation: pulseStar 2.8s ease-in-out infinite 0.7s; }
+    .comet-group { animation: cometPulse 4s ease-in-out infinite; }
+  </style>
+
+  <g clip-path="url(#roundedClip)">
+    <!-- Sky Background -->
+    <rect width="1200" height="380" fill="url(#skyGrad)" />
+    <rect width="1200" height="380" fill="url(#horizonGlow)" />
+
+    <!-- Twinkling Starfield -->
+    <g fill="#ffffff">
+      <circle class="star-1" cx="95" cy="45" r="1.5" />
+      <circle class="star-2" cx="165" cy="82" r="1" />
+      <circle class="star-3" cx="240" cy="30" r="1.8" />
+      <circle class="star-1" cx="330" cy="68" r="1.2" />
+      <circle class="star-2" cx="420" cy="28" r="1.4" />
+      <circle class="star-3" cx="520" cy="52" r="1" />
+      <circle class="star-1" cx="640" cy="25" r="1.6" />
+      <circle class="star-2" cx="760" cy="48" r="1.2" />
+      <circle class="star-3" cx="880" cy="22" r="1.8" />
+      <circle class="star-1" cx="960" cy="60" r="1.3" />
+      <circle class="star-2" cx="1055" cy="36" r="1.5" />
+      <circle class="star-3" cx="1130" cy="75" r="1.2" />
+      <circle class="star-1" cx="70" cy="125" r="1.1" />
+      <circle class="star-2" cx="1090" cy="118" r="1.4" />
+      <circle class="star-3" cx="290" cy="110" r="1" />
+      <circle class="star-1" cx="840" cy="95" r="1.3" />
+    </g>
+
+    <!-- Four-point Sparkle Stars -->
+    <g fill="#e0f2fe" filter="url(#softGlow)">
+      <path class="star-1" d="M 190 42 Q 190 50 198 50 Q 190 50 190 58 Q 190 50 182 50 Q 190 50 190 42 Z" />
+      <path class="star-3" d="M 1010 38 Q 1010 45 1017 45 Q 1010 45 1010 52 Q 1010 45 1003 45 Q 1010 45 1010 38 Z" />
+      <path class="star-2" d="M 710 26 Q 710 32 716 32 Q 710 32 710 38 Q 710 32 704 32 Q 710 32 710 26 Z" />
+    </g>
+
+    <!-- Crescent Moon in Twilight Sky -->
+    <g transform="translate(1030, 75)" filter="url(#softGlow)">
+      <path d="M 0 -22 A 22 22 0 1 0 22 15 A 18 18 0 1 1 0 -22 Z" fill="#fef3c7" opacity="0.92" />
+    </g>
+
+    <!-- Iconic Makoto Shinkai Split Comet (Kimi no Na wa aesthetic) -->
+    <g class="comet-group" filter="url(#glow)">
+      <!-- Upper Pink/Magenta Split Fragment -->
+      <path d="M 75 -10 Q 340 45 640 132 L 638 136 Q 335 52 75 -10 Z" fill="url(#cometSplit)" />
+      <circle cx="640" cy="134" r="3" fill="#fce7f3" />
+
+      <!-- Main Cyan/White Comet Arc -->
+      <path d="M 40 -15 Q 370 50 725 142 L 722 150 Q 365 60 40 -15 Z" fill="url(#cometMain)" />
+      <circle cx="725" cy="146" r="5.5" fill="#ffffff" />
+      <circle cx="725" cy="146" r="11" fill="#38bdf8" opacity="0.45" />
+
+      <!-- Sparkle Dust Along Comet Trail -->
+      <circle cx="480" cy="84" r="1.8" fill="#bae6fd" opacity="0.9" />
+      <circle cx="545" cy="101" r="1.4" fill="#f9a8d4" opacity="0.8" />
+      <circle cx="610" cy="117" r="2" fill="#ffffff" opacity="0.85" />
+      <circle cx="675" cy="133" r="1.5" fill="#7dd3fc" opacity="0.9" />
+    </g>
+
+    <!-- Distant Soft Pastel Clouds (Layer 1) -->
+    <g class="cloud-rev" fill="url(#cloudGrad2)">
+      <path d="M -40 290 Q 40 245 130 268 Q 210 220 310 258 Q 395 235 470 275 L 470 360 L -40 360 Z" />
+      <path d="M 730 285 Q 810 230 905 260 Q 985 210 1090 250 Q 1160 230 1240 270 L 1240 360 L 730 360 Z" />
+    </g>
+
+    <!-- Midground Billowing Shinkai Clouds (Layer 2) -->
+    <g class="cloud-slow" fill="url(#cloudGrad1)">
+      <path d="M -20 320 Q 75 265 170 292 Q 260 248 360 288 Q 450 268 530 305 Q 620 275 710 302 Q 810 255 915 288 Q 1020 245 1120 282 Q 1180 265 1230 295 L 1230 380 L -20 380 Z" />
+    </g>
+
+    <!-- Distant Mountain Range Silhouette -->
+    <path d="M 0 345 L 95 308 L 185 332 L 290 292 L 410 335 L 520 312 L 650 340 L 790 302 L 910 330 L 1035 290 L 1145 325 L 1200 310 L 1200 380 L 0 380 Z" fill="#1e1538" opacity="0.85" />
+
+    <!-- City / Horizon Silhouette & Train Bridge -->
+    <path d="M 0 356 L 1200 356 L 1200 380 L 0 380 Z" fill="#0f0a24" />
+    
+    <!-- Aesthetic Train Viaduct Silhouette on Left & Right -->
+    <g fill="#120d2b">
+      <rect x="0" y="344" width="320" height="4" />
+      <rect x="30" y="348" width="6" height="15" />
+      <rect x="80" y="348" width="6" height="15" />
+      <rect x="130" y="348" width="6" height="15" />
+      <rect x="180" y="348" width="6" height="15" />
+      <rect x="230" y="348" width="6" height="15" />
+      <rect x="280" y="348" width="6" height="15" />
+
+      <!-- Utility Poles & Powerlines on Right -->
+      <rect x="980" y="305" width="3" height="55" />
+      <rect x="973" y="312" width="17" height="2" />
+      <rect x="975" y="318" width="13" height="2" />
+      <rect x="1110" y="295" width="3.5" height="65" />
+      <rect x="1102" y="302" width="19" height="2" />
+      <rect x="1104" y="309" width="15" height="2" />
+      <path d="M 880 335 Q 930 342 981 313" stroke="#120d2b" stroke-width="1.2" fill="none" />
+      <path d="M 981 313 Q 1045 332 1111 303" stroke="#120d2b" stroke-width="1.2" fill="none" />
+      <path d="M 1111 303 Q 1155 320 1200 310" stroke="#120d2b" stroke-width="1.2" fill="none" />
+    </g>
+
+    <!-- Commuter Train with Glowing Warm Windows -->
+    <g>
+      <rect x="45" y="335" width="175" height="9" rx="2" fill="#1e1b4b" />
+      <g fill="#fde68a" filter="url(#softGlow)">
+        <rect x="52" y="337" width="10" height="4" rx="1" />
+        <rect x="66" y="337" width="10" height="4" rx="1" />
+        <rect x="80" y="337" width="10" height="4" rx="1" />
+        <rect x="98" y="337" width="10" height="4" rx="1" />
+        <rect x="112" y="337" width="10" height="4" rx="1" />
+        <rect x="126" y="337" width="10" height="4" rx="1" />
+        <rect x="144" y="337" width="10" height="4" rx="1" />
+        <rect x="158" y="337" width="10" height="4" rx="1" />
+        <rect x="172" y="337" width="10" height="4" rx="1" />
+        <rect x="190" y="337" width="10" height="4" rx="1" />
+        <rect x="204" y="337" width="10" height="4" rx="1" />
+      </g>
+    </g>
+
+    <!-- Distant Warm City Lights Along Horizon -->
+    <g fill="#fef08a" opacity="0.8">
+      <circle cx="350" cy="353" r="1.2" />
+      <circle cx="368" cy="354" r="1" />
+      <circle cx="390" cy="352" r="1.5" />
+      <circle cx="415" cy="354" r="1" />
+      <circle cx="780" cy="353" r="1.3" />
+      <circle cx="805" cy="352" r="1" />
+      <circle cx="825" cy="354" r="1.4" />
+      <circle cx="855" cy="353" r="1.1" />
+      <circle cx="890" cy="354" r="1.3" />
+    </g>
+
+    <!-- Center Glassmorphism Profile Banner Card -->
+    <g transform="translate(230, 92)">
+      <rect x="0" y="0" width="740" height="196" rx="18" ry="18" fill="url(#glassGrad)" stroke="url(#borderGrad)" stroke-width="1.8" />
+      
+      <!-- Corner Anime HUD Accents -->
+      <path d="M 14 26 L 14 14 L 26 14" stroke="#7dd3fc" stroke-width="2.2" fill="none" stroke-linecap="round" />
+      <path d="M 726 26 L 726 14 L 714 14" stroke="#fde68a" stroke-width="2.2" fill="none" stroke-linecap="round" />
+      <path d="M 14 170 L 14 182 L 26 182" stroke="#f472b6" stroke-width="2.2" fill="none" stroke-linecap="round" />
+      <path d="M 726 170 L 726 182 L 714 182" stroke="#7dd3fc" stroke-width="2.2" fill="none" stroke-linecap="round" />
+
+      <!-- Japanese Twilight Subtitle -->
+      <text x="370" y="44" text-anchor="middle" class="jp-sub">✦ 黄昏時 • TASOGARE-DOKI // COZY CODING SANCTUARY ✦</text>
+
+      <!-- Main Name (Crisp without blur) -->
+      <text x="370" y="102" text-anchor="middle" class="title">BRIAN SILABAN</text>
+
+      <!-- Subtle Divider Line -->
+      <line x1="160" y1="122" x2="580" y2="122" stroke="url(#borderGrad)" stroke-width="1.2" opacity="0.75" />
+      <circle cx="370" cy="122" r="3.5" fill="#fde68a" />
+
+      <!-- Role & Stack Subtitle -->
+      <text x="370" y="150" text-anchor="middle" class="subtitle">Backend &amp; Mobile Developer • Linux Enthusiast</text>
+
+      <!-- Cozy Aesthetic Tags -->
+      <text x="370" y="176" text-anchor="middle" class="tag">[ PYTHON • POSTGRESQL • MYSQL • FLUTTER • LINUX ]</text>
+    </g>
+  </g>
+</svg>
